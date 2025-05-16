@@ -3,7 +3,10 @@ pipeline {
 
     triggers {
         // Poll SCM every 5 minutes
-        pollSCM('H/5 * * * *')
+        pollSCM('H/1 * * * *')
+
+
+        
     }
 
     stages {

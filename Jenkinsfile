@@ -5,7 +5,7 @@ pipeline {
         // Poll SCM every 5 minutes
         pollSCM('H/1 * * * *')
 
-        
+
 
 
 
@@ -20,6 +20,8 @@ pipeline {
         }
 
         stage('Unit and Integration Tests') {
+
+            
             steps {
                 echo 'Running unit and integration tests with JUnit'
                 // e.g., sh 'mvn test' or relevant test command

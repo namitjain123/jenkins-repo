@@ -3,7 +3,7 @@ pipeline {
 
     triggers {
         // Poll SCM every 5 minutes
-        pollSCM('H/1 * * * *')
+        pollSCM('* * * * *')
 
 
 
@@ -14,6 +14,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                
                 echo 'Building the project using Maven'
                 // e.g., sh 'mvn clean package' or bat 'mvn clean package' on Windows
             }
@@ -21,7 +22,7 @@ pipeline {
 
         stage('Unit and Integration Tests') {
 
-            
+
             steps {
                 echo 'Running unit and integration tests with JUnit'
                 // e.g., sh 'mvn test' or relevant test command

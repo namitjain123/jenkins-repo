@@ -5,8 +5,10 @@ pipeline {
         // Poll SCM every 5 minutes
         pollSCM('H/1 * * * *')
 
-
         
+
+
+
     }
 
     stages {
